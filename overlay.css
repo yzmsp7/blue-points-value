@@ -1,0 +1,118 @@
+/* 插在每張商品卡最下面的一行。前綴 bpx- 避免與商城 CSS 衝突。 */
+.bpx-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 6px 4px 0;
+  padding: 4px 6px;
+  background: #f4f7fc;
+  border-radius: 5px;
+  font: 600 12px/1.4 system-ui, "Microsoft JhengHei", sans-serif;
+}
+.bpx-pts { color: #1e5fce; white-space: nowrap; }
+.bpx-price {
+  width: 84px;
+  padding: 2px 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.bpx-search {
+  padding: 2px 8px;
+  border: 1px solid #1e5fce;
+  background: #eaf1fc;
+  color: #1e5fce;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.bpx-link {
+  color: #1e5fce;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.bpx-link:hover { text-decoration: underline; }
+.bpx-per { margin-left: auto; color: #1a8a3a; white-space: nowrap; }
+
+/* 右下角浮動控制：TWD/USD 切換 + 匯率 */
+.bpx-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 300px;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+  font: 13px/1.4 system-ui, "Microsoft JhengHei", sans-serif;
+  color: #1a1a1a;
+  z-index: 2147483647;
+}
+.bpx-bar { display: flex; align-items: center; gap: 8px; }
+.bpx-title { font-weight: 600; color: #1e5fce; }
+.bpx-toggle {
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1;
+}
+/* 收合：只留標題列，面板縮成一小條 */
+.bpx-panel.bpx-min { width: auto; }
+.bpx-panel.bpx-min > :not(.bpx-bar) { display: none; }
+.bpx-head { display: flex; align-items: center; gap: 8px; }
+.bpx-count { color: #666; font-size: 12px; }
+.bpx-sort {
+  margin-left: auto;
+  padding: 3px 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.bpx-list { max-height: 42vh; overflow-y: auto; display: flex; flex-direction: column; }
+.bpx-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+}
+.bpx-row:hover { background: #f4f7fc; }
+.bpx-hit { outline: 2px solid #1e5fce; outline-offset: 2px; }
+.bpx-row-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bpx-row-val { color: #1a8a3a; font-weight: 600; white-space: nowrap; }
+.bpx-empty { color: #999; font-size: 12px; padding: 4px 0; }
+.bpx-cur {
+  padding: 5px 10px;
+  border: 1px solid #1e5fce;
+  background: #1e5fce;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.bpx-all {
+  padding: 5px 10px;
+  border: 1px solid #1e5fce;
+  background: #eaf1fc;
+  color: #1e5fce;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.bpx-rate-info { color: #888; font-size: 12px; white-space: nowrap; }

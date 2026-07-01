@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "藍血價值 Blue Points Value",
+  "version": "0.1.0",
+  "description": "在商城頁抓藍點數，一鍵背景查真實市價自動填入，算出每點值多少錢。",
+  "icons": { "128": "128.png" },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://ibm65984twn.awardsworldwide.com/*",
+    "https://www.bing.com/*",
+    "https://html.duckduckgo.com/*",
+    "https://www.google.com/*",
+    "https://open.er-api.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://ibm65984twn.awardsworldwide.com/ecommerce/*"],
+      "js": ["content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
